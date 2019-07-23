@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import happy.mjstudio.layoutsample.ui.ConstraintBasicFragment
+import happy.mjstudio.layoutsample.ui.ConstraintCircleFragment
+import happy.mjstudio.layoutsample.ui.ConstraintPercentFragment
 import happy.mjstudio.layoutsample.ui.LinearLayoutFragment
 import kotlin.reflect.KClass
 import kotlin.reflect.full.primaryConstructor
@@ -26,7 +28,9 @@ class NavigationAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm,Fra
     enum class NavigationMenu(val kClass: KClass<out Fragment>) {
 
         LINEARLAYOUT(LinearLayoutFragment::class),
-        CONSTRAINT_BASIC(ConstraintBasicFragment::class)
+        CONSTRAINT_BASIC(ConstraintBasicFragment::class),
+        CONSTRAINT_PERCENT(ConstraintPercentFragment::class),
+        CONSTRAINT_CIRCLE(ConstraintCircleFragment::class)
 
         ;
 
@@ -36,7 +40,7 @@ class NavigationAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm,Fra
              *
              * @return 모든 네비게이션 메뉴 아이템들
              */
-            fun getAllNavigationMenu(): List<NavigationMenu> = listOf(LINEARLAYOUT, CONSTRAINT_BASIC)
+            fun getAllNavigationMenu() = NavigationMenu.values()
 
             /**
              * 프라그먼트 객체를 생성해서 인자로 들어온 Argument 들까지 추가해서 반환해준다.

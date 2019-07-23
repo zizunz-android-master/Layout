@@ -9,8 +9,7 @@ import happy.mjstudio.layoutsample.R
 
 class ConstraintPercentFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_constraint_basic,container,false)
-
+        val v = inflater.inflate(R.layout.fragment_constraint_percent,container,false)
         return v
     }
 }
