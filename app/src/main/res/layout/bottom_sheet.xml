@@ -9,21 +9,21 @@
         android:orientation="vertical"
         android:elevation="32dp"
         app:behavior_peekHeight="0dp"
-        android:background="#dfff"
+        android:background="#efff"
         app:behavior_hideable="true"
         android:id="@+id/bottomSheet"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         >
 
-    <TextView
-            android:text="LinearLayout"
-            android:id="@+id/linearLayoutButton"
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bottomSheetRecyclerView"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            />
+            android:layout_height="match_parent"/>
+
+
 
 </LinearLayout>
