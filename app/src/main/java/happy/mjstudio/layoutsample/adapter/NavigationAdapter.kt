@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import happy.mjstudio.layoutsample.ui.ConstraintBasicFragment
-import happy.mjstudio.layoutsample.ui.ConstraintCircleFragment
-import happy.mjstudio.layoutsample.ui.ConstraintPercentFragment
-import happy.mjstudio.layoutsample.ui.LinearLayoutFragment
+import happy.mjstudio.layoutsample.ui.*
 import kotlin.reflect.KClass
 import kotlin.reflect.full.primaryConstructor
 
@@ -30,7 +27,8 @@ class NavigationAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm,Fra
         LINEARLAYOUT(LinearLayoutFragment::class),
         CONSTRAINT_BASIC(ConstraintBasicFragment::class),
         CONSTRAINT_PERCENT(ConstraintPercentFragment::class),
-        CONSTRAINT_CIRCLE(ConstraintCircleFragment::class)
+        CONSTRAINT_CIRCLE(ConstraintCircleFragment::class),
+        COORDINATORLAYOUT(CoordinatorLayoutFragment::class)
 
         ;
 
